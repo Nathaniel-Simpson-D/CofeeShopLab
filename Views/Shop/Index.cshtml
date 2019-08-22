@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<Items>
+<h1>Shop</h1>
+@foreach (var item in Model)
+{
+    <h4>@item.Name</h4>
+    @*<p>@item.Description</p>*@
+    <p>@item.Quanity</p>
+    
+    <p>$@item.Price</p>
+
+    <a href="/Shop/AddItem"?Id="@item.Id" ><input type="submit" value="Buy" class="btn btn-primary" /></a>
+}
+
